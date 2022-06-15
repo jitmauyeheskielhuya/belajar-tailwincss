@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Viga&display=swap"
+    rel="stylesheet">
+  <title>Belajar TailwindCSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          spacing: {
+            13: '3.25rem'
+          },
+          fontFamily: {
+            iiter: ['Inter'],
+          },
+          colors: {
+            ekel: '#bada55',
+            kopi: '#c0ffee',
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss"></style>
+</head>
+
+<body>
+  <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span
+      class="bg-gradient-to-r from-blue-500 to-violet-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
+
+
+  <section class="mb-10 bg-gradient-to-bl from-indigo-400 via-red-200 to-cyan-600">
+    <h2 class="text-3xl text-center">Spacing</h2>
+    <div class="m-13 ">Margin</div>
+    <div class="p-8">Padding</div>
+  </section>
+
+  <section class="mb-10 bg-slate-300">
+    <h2 class="text-3xl text-center">Sizing</h2>
+    <div class="w-32 h-32 bg-ekel">Kotak 1</div>
+  </section>
+
+
+  <section class="mb-96 font-inter max-w-3xl mx-auto bg-red-200">
+    <h2 class="mb-2 text-4xl font-bold">Belajar Mengenai Typography pada TailwindCSS</h2>
+    <div class="mb-4 text-gray-500">
+      By <a href="" class="text-gray-700 font-semibold">Yeheskiel Jitmau</a> , 16 Juni 2022
+    </div>
+    <p class="mb-4">
+      Lorem ipsum dolor, sit amet <a class="underline font-semibold text-blue-500" href="">consectetur</a> adipisicing
+      elit. Veniam
+      tempore commodi quia necessitatibus expedita non
+      aspernatur velit temporibus quidem repellendus? Nostrum expedita provident iste quibusdam atque dolorum dolores
+      eius modi ab mollitia repellat nemo sapiente accusantium ipsum, sequi molestias debitis eveniet illo! Laudantium,
+      cum cumque! Repellendus laborum similique facere odit.
+    </p>
+    <blockquote class="mb-4 italic font-thin text-xl">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
+      vero quam
+      laudantium illo eum dolor voluptatum animi voluptate deserunt suscipit."</blockquote>
+    <p class="mb-4">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam amet, alias eius esse illum at exercitationem, ex
+      suscipit dignissimos cumque pariatur expedita rem, deserunt ab molestias quos! Ut, incidunt optio.
+    </p>
+  </section>
+
+
+</body>
+
+</html>
