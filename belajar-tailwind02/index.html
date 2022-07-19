@@ -12,26 +12,26 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-        darkMode: 'class',
-        theme: {
+      darkMode: 'class',
+      theme: {
         extend: {
           spacing: {
-          13: '3.25rem'
+            13: '3.25rem'
           },
           fontFamily: {
-          inter: ['Inter'],
+            inter: ['Inter'],
           },
           colors: {
-          ekel: '#bada55',
-          kopi: '#c0ffee',
+            ekel: '#bada55',
+            kopi: '#c0ffee',
           },
-          },
-          },
-          }
-          </script>
-          <title>Belajar TailwindCSS</title>
-          <style type="text/tailwindcss">
-            #toggle:checked ~ label div.toggle-circle {
+        },
+        },
+        }
+        </script>
+        <title>Belajar TailwindCSS</title>
+        <style type="text/tailwindcss">
+          #tombol:checked ~ label div.tombol-circle {
       @apply translate-x-3;
     }
   </style>
@@ -109,10 +109,10 @@
 
   <div class="flex justify-center">
     <span class="text-sm text-slate-500 mr-2">Light</span>
-    <input type="checkbox" id="toggle" class="hidden">
-    <label for="toggle">
+    <input type="checkbox" id="tombol" class="hidden">
+    <label for="tombol">
       <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
-        <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        <div class="w-4 h-4 bg-white rounded-full tombol-circle"></div>
       </div>
     </label>
     <span class="text-sm text-slate-500 ml-2">Dark</span>
@@ -133,7 +133,7 @@ block mx-auto hover:bg-sky-600 active:bg-sky-800 focus:ring focus:ring-sky-300 d
       voluptas ipsam
       pariatur, explicabo sint eos deleniti voluptates nisi veniam voluptate natus! Ex explicabo ab molestiae.
     </p>
-    </div>
+  </div>
 
   <div class="max-w-lg botder border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
     <form action="">
@@ -168,9 +168,9 @@ block mx-auto hover:bg-sky-600 active:bg-sky-800 focus:ring focus:ring-sky-300 d
     const html = document.querySelector('html');
 
     checkbox.addEventListener('clik', function () {
-    checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+      checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
     });
-    </script>
+  </script>
 
 </body>
 
