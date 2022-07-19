@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -25,13 +25,23 @@
             ekel: '#bada55',
             kopi: '#c0ffee',
           },
+          animation: {
+          'spin-slow': 'spin 3s linear infinite',
+          'goyang': 'goyang 1s ease-in-out infinite',
+          },
+          keyframes: {
+          goyang: {
+          '0%, 100%': { transform: 'rotate (-3deg)'},
+          '50%': { transform: 'rotate(3deg)' },
+          },
+          },
         },
         },
         }
         </script>
         <title>Belajar TailwindCSS</title>
         <style type="text/tailwindcss">
-          #tombol:checked ~ label div.tombol-circle {
+          #tombol:checked ~ label div.tombol_bulat {
       @apply translate-x-3;
     }
   </style>
@@ -54,13 +64,14 @@
   </section>
 
 
-  <section class="font-inter max-w-3xl mx-auto bg-gradient-to-br from-lime-700 to-red-400">
-    <h2 class="mb-2 text-4xl font-bold bg-gradient-to-r from-blue-100 to-blue-500 bg-clip-text text-transparent">
+  <section class="font-inter max-w-3xl mx-auto bg-gradient-to-br from-emerald-300 to-red-400 p-3 text-justify">
+    <h2
+      class="mb-2 text-4xl font-bold bg-gradient-to-r from-slate-800 to-red-500 bg-clip-text text-transparent text-center">
       Belajar Mengenai Typography pada TailwindCSS</h2>
     <div class="mb-4 text-gray-500">
       By <a href="" class="text-gray-700 font-semibold">Yeheskiel Jitmau</a> , 16 Juni 2022
     </div>
-    <p class="mb-4">
+    <p class="mb-4 text-justify">
       Lorem ipsum dolor, sit amet <a class="underline font-semibold text-blue-500" href="">consectetur</a> adipisicing
       elit. Veniam
       tempore commodi quia necessitatibus expedita non
@@ -80,7 +91,8 @@
   <div class="max-w-xl h-96 bg-slate-400 mx-auto mt-[42px] overflow-y-scroll bg-scroll mb-10 rounded-md"
     style="background-image: url('https://source.unsplash.com/1000x600?computer');">
 
-    <p class="p-5 text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi magni quaerat, vitae ducimus
+    <p class="p-5 text-2xl text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi magni quaerat,
+      vitae ducimus
       magnam ipsum quia maiores repellat velit? Labore numquam eum quae voluptatem cupiditate, sint fugiat illo, ipsa,
       eligendi fugit saepe necessitatibus impedit harum. Quibusdam expedita culpa vitae ex enim, aliquam architecto
       voluptas. Quasi quia illum vitae, velit dolore numquam molestiae voluptates! Labore rerum, deserunt nostrum sint
@@ -99,7 +111,8 @@
   </div>
 
   <div
-    class="mt32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 flex"
+    class="mt32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl
+    shadow-slate-500 overflow-hidden border-8 flex border-slate-400"
     style="background-image: url(./img/1.jpg);">
     <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"></div>
   </div>
@@ -112,7 +125,7 @@
     <input type="checkbox" id="tombol" class="hidden">
     <label for="tombol">
       <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
-        <div class="w-4 h-4 bg-white rounded-full tombol-circle"></div>
+        <div class="w-4 h-4 bg-white rounded-full tombol_bulat"></div>
       </div>
     </label>
     <span class="text-sm text-slate-500 ml-2">Dark</span>
@@ -153,10 +166,49 @@ block mx-auto hover:bg-sky-600 active:bg-sky-800 focus:ring focus:ring-sky-300 d
     class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg  hover:rotate-180 hover:transition hover:bg-red-400 origin-top-left">
   </div>
 
-  <div class="w-40 h-40 mx-auto mt-20 group">
-    <div
-      class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-500 delay-200">
+  <div class="w-40 h-40 mx-auto bg-green-300 rounded-lg mt-20 group">
+    <div class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition
+      duration-500 delay-1000 ease-linear">
     </div>
+  </div>
+
+  <div class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg mt-20 animate-goyang">
+  </div>
+  <hr class="my-20 border-t-4">
+  </hr>
+
+  <div class="container px-8 text-justify font-serif mx-auto">
+    <div class="border rounded-lg shadow-lg p-10 relative">
+      <div
+            class="w-10 h-10 bg-sky-300 rounded-full flex fixed bottom-5 right-5 cursor-pointer
+            hover:bg-sky-400">
+            <a href="#" class="m-auto text-lg">🔝</a>
+            </div>
+            <img src="img/1.jpg" alt="laptop" width="150" class="float-left mr-2 rounded-sm">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque natus veritatis quia sit voluptatibus
+              perferendis
+              quasi pariatur aspernatur suscipit error architecto quo corrupti et iure, magni asperiores velit a. Sed
+              doloribus
+              possimus minima dolore cum corrupti consequuntur recusandae ipsa non distinctio animi itaque facere
+              facilis
+              assumenda odit impedit reprehenderit quae dolorum expedita nam veritatis voluptatibus, pariatur totam.
+              Dolorem
+              iste non odit deleniti laboriosam, sit ex quasi nam eligendi a provident aut voluptatibus laborum ad
+              mollitia
+              quod
+              dolorum maxime impedit neque illum debitis assumenda eos. Incidunt iusto, ex omnis animi officia minima
+              recusandae
+              distinctio repellendus facere tempora culpa. Rerum, aliquid non?
+            </p>
+            </div>
+            </div>
+<div class="container mx-auto border rounded-lg shadow-lg px-3 mt-20 columns-3 py-3">
+  <img src="http://source.unsplash.com/600x400" alt="Image" class="mx-auto mb-3 rounded-md">
+  <img src="http://source.unsplash.com/600x400" alt="Image" class="mx-auto mb-3 rounded-md">
+  <img src="http://source.unsplash.com/600x400" alt="Image" class="mx-auto mb-3 rounded-md">
+  <img src="http://source.unsplash.com/600x400" alt="Image" class="mx-auto mb-3 rounded-md">
+  <img src="http://source.unsplash.com/600x400" alt="Image" class="mx-auto mb-3 rounded-md">
+  <img src="http://source.unsplash.com/600x400" alt="Image" class="mx-auto mb-3 rounded-md">
   </div>
 
 
@@ -164,10 +216,10 @@ block mx-auto hover:bg-sky-600 active:bg-sky-800 focus:ring focus:ring-sky-300 d
 
 
   <script>
-    const checkbox = document.querySelector('#toggle');
+    const checkbox = document.querySelector('#tombol');
     const html = document.querySelector('html');
 
-    checkbox.addEventListener('clik', function () {
+    checkbox.addEventListener('click', function () {
       checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
     });
   </script>
