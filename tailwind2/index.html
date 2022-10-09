@@ -25,6 +25,16 @@
             huya: '#bada55',
             kopi: '#c0ffee',
           },
+          animation: {
+          'spin-slow': 'spin 3s linear infinite',
+          'goyang': 'goyang 1s ease-in-out infinite',
+          },
+          keyframes: {
+          goyang: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+          },
+          },
         },
       },
     };
@@ -146,6 +156,21 @@
         <p class="text-sm m-1 text-red-600 invisible peer-invalid:visible">Email tidak valid</p>
       </label>
     </form>
+  </div>
+
+  <hr class="my-20">
+
+  <div
+    class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-180  hover:bg-green-400 transition origin-top-left">
+  </div>
+
+  <div class="w-40 h-40 mx-auto mt-20 group">
+    <div
+      class="w-full h-full bg-sky-400 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-500">
+    </div>
+  </div>
+
+  <div class="w-40 h-40 bg-fuchsia-500 mx-auto rounded-lg shadow-lg mt-20 animate-goyang">
   </div>
 
 
