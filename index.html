@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
 
@@ -9,10 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap" rel="stylesheet">
-
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           spacing: {
@@ -44,16 +42,13 @@
     };
   </script>
   <title>Belajar TailwindCSS</title>
+  <link rel="stylesheet" href="output.css">
 
-  <style type="text/tailwindcss">
-    #tombol:checked ~ label div.tombol-bulat {
-    @apply translate-x-3;
-    }
-  </style>
+  <style type="text/tailwindcss"></style>
 
 </head>
 
-<body class="dark:bg-slate-800 dark:text-slate-200 mx-auto">
+<body class="mx-auto">
   <h1 class="text-8xl font-bold text-center my-10">Belajar <span
       class="bg-gradient-to-tl from-cyan-300 to-teal-600 bg-clip-text text-transparent">Tailwin CSS</span></h1>
 
@@ -121,17 +116,6 @@
   <hr class="my-20">
 
 
-
-  <div class="flex justify-center">
-    <span class="text-sm text-slate-400 mr-2">Light</span>
-    <input type="checkbox" id="tombol" class="hidden">
-    <label for="tombol">
-      <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
-        <div class="w-4 h-4 bg-white rounded-full tombol-bulat"></div>
-      </div>
-    </label>
-    <span class="text-sm text-slate-400 ml-2">Dark</span>
-  </div>
 
 
   <button
@@ -349,14 +333,6 @@
 
   <div class="mb-96"></div>
 
-  <script>
-    const checkbox = document.querySelector('#tombol');
-    const html = document.querySelector('html');
-
-    checkbox.addEventListener('click', function () {
-      checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
-    });
-  </script>
 
 </body>
 
